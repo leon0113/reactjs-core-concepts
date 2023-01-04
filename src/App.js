@@ -17,7 +17,9 @@ function App() {
       <div className="music">
         <p>Name : {number + 2}</p>
         <p>Age : {singer.age}</p>
-        <p>Address : {singer.address}</p>
+        <p style={{ color: "blue", backgroundColor: "black" }}>
+          Address : {singer.address}
+        </p>
       </div>
     </div>
   );
