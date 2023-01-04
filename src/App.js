@@ -13,7 +13,8 @@ function App() {
     <div className="App">
       <Person></Person>
       <Person></Person>
-      <Person1></Person1>
+      <Person1 name1="Tahjib" age="24"></Person1>
+      <Person1 name1="Leon" age="22"></Person1>
       <Person1></Person1>
       <h4>New Components :</h4>
       <Friend></Friend>
@@ -25,10 +26,12 @@ function Person() {
   return <h1>Shakib Al Hasan</h1>;
 }
 
-function Person1() {
+function Person1(info) {
+  console.log(info);
   return (
     <div className="person">
-      <h1>Steve Smith</h1>
+      <h1>Name : {info.name1}</h1>
+      <p>Age : {info.age}</p>
       <p>Cricketer,Australia</p>
     </div>
   );
