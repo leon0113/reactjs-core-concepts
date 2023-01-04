@@ -9,13 +9,20 @@ const singer = {
 };
 
 function App() {
+  const names = ["Tahjib", "Leon", "Leu", "baby", "jaan", "pakhi", "bor"];
   return (
     <div className="App">
+      {names.map((name) => (
+        <li>Name : {name}</li>
+      ))}
+      {names.map((name) => (
+        <Person1 name1={name}></Person1>
+      ))}
+      {/* <Person></Person>
       <Person></Person>
-      <Person></Person>
-      <Person1 name1="Tahjib" age="24"></Person1>
-      <Person1 name1="Leon" age="22"></Person1>
-      <Person1></Person1>
+      <Person1 name1={names[0]} age="24"></Person1>
+      <Person1 name1={names[1]} age="22"></Person1>
+      <Person1 name1={names[2]} age="20"></Person1> */}
       <h4>New Components :</h4>
       <Friend></Friend>
     </div>
@@ -31,7 +38,7 @@ function Person1(info) {
   return (
     <div className="person">
       <h1>Name : {info.name1}</h1>
-      <p>Age : {info.age}</p>
+      {/* <p>Age : {info.age}</p> */}
       <p>Cricketer,Australia</p>
     </div>
   );
