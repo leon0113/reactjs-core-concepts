@@ -1,54 +1,30 @@
-import logo from "./logo.svg";
 import "./App.css";
 
-const number = 555;
-const singer = {
-  name: "Leon",
-  age: 24,
-  address: "KHULNA",
-};
-
 function App() {
-  const names = ["Tahjib", "Leon", "Leu", "baby", "jaan", "pakhi", "bor"];
+  const products = [
+    { name: "laptop", price: 40000 },
+    { name: "phone", price: 15000 },
+    { name: "watch", price: 3000 },
+    { name: "Ipad", price: 20000 },
+    { name: "Car", price: 30200 },
+  ];
+
   return (
     <div className="App">
-      {names.map((name) => (
-        <li>Name : {name}</li>
+      {products.map((product) => (
+        <Product name={product.name} price={product.price}></Product>
       ))}
-      {names.map((name) => (
-        <Person1 name1={name}></Person1>
-      ))}
-      {/* <Person></Person>
-      <Person></Person>
-      <Person1 name1={names[0]} age="24"></Person1>
-      <Person1 name1={names[1]} age="22"></Person1>
-      <Person1 name1={names[2]} age="20"></Person1> */}
-      <h4>New Components :</h4>
-      <Friend></Friend>
+      {/* <Product name="laptop" price="25000"></Product>
+      <Product name="phone" price="15000"></Product> */}
     </div>
   );
 }
 
-function Person() {
-  return <h1>Shakib Al Hasan</h1>;
-}
-
-function Person1(info) {
-  console.log(info);
+function Product(props) {
   return (
-    <div className="person">
-      <h1>Name : {info.name1}</h1>
-      {/* <p>Age : {info.age}</p> */}
-      <p>Cricketer,Australia</p>
-    </div>
-  );
-}
-
-function Friend() {
-  return (
-    <div className="person">
-      <h3> Name : Leon</h3>
-      <p>Age : 24</p>
+    <div className="product">
+      <h3>Name : {props.name} </h3>
+      <p>Price : {props.price}</p>
     </div>
   );
 }

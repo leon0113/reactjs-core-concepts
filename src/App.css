@@ -37,16 +37,10 @@
   }
 }
 
-.container {
-  color: red;
-  background-color: black;
-  padding: 20px;
-}
-.person {
-  color: red;
-  background-color: #61dafb;
-  padding: 20px;
-  border: 2px solid black;
-  margin: 20px;
-  border-radius: 10px;
+.product {
+  background-color: lightpink;
+  padding: 5px;
+  border: 2px solid maroon;
+  margin: 15px;
+  border-radius: 20px;
 }
